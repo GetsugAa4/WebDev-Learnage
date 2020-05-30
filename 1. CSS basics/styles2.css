@@ -1,0 +1,23 @@
+h2 {
+    color: blue;
+}
+/* .boxmodel {
+    border: 5px solid red;
+    display: inline-block;
+    padding : 5px 20px;
+    margin : 0px 20px;
+/* Changing content box * /
+    width: 33px;
+    height: 20px;
+    text-align: right;
+} */
+p {
+    font-size: 20px;
+
+}
+span {
+    font-size: 2rem;
+}
+li {
+    list-style: square;
+}
