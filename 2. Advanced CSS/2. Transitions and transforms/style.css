@@ -1,22 +1,35 @@
+html,body {
+  height:100%;
+}
+
+body {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  align-items:center;
+}
+
 .square {
-    background-color: khaki;
-    height:150px;
-    width: 150px;
-    transition : transform 300ms ;
-    display:flex;
-    flew-flow:column wrap;
-    justify-content:center;
-    align-items:center;
-    border-radius:50px 0px 50px 0px;
-    transform-origin: 100% 100%;
-  }
+  background-color: khaki;
+  height:150px;
+  width: 150px;
+  transition : transform 300ms;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  align-items:center;
+  border-radius:0px 50px;
+  /* transform-origin: 100% 100%; */
+}
   
-  .square:hover {
-    transform:skew(-20deg,20deg);
-  }
-  p{
-    transition : transform 300ms ;
-  }
-  p:hover {
-   transform : skew(20deg,-20deg);
-  }
+.square:hover {
+  transform:skew(-20deg,20deg) scale(4) ;
+  /* transform:rotate(-1turn) ;
+  transform:translate(-50px, -10px); */
+}
+p{
+  transition : transform 300ms ;
+}
+p:hover {
+  transform : skew(20deg,-20deg);
+}
