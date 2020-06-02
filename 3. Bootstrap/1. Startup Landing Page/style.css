@@ -15,7 +15,7 @@ hr {
   max-width: 65px;
 }
 .buffer{
-  height: 10rem;
+  height: 12rem;
 }
 .btn {
   font-weight: 700;
@@ -34,4 +34,8 @@ hr {
 }
 .btn-xl {
   padding:1rem 2rem;
+}
+a, a:hover, a:active {
+  color: #E2EBDB;
+  text-decoration: none;
 }
