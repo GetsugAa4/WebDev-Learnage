@@ -1,13 +1,105 @@
-@media screen and (max-width : 1440px){
+/* Setting colors */
+:root {
+    --blue: hsl(246, 80%, 60%); /* #userName */
+    --dark-blue : hsl(235, 46%, 20%); 
+    --very-dark-blue: hsl(226, 43%, 10%);
+}
+
+body {
+    color: white;
+    background-color: var(--very-dark-blue);
+    font-family: 'Rubik', sans-serif;
+}
+main {
+    height: 100%;
+}
+.grid-subitem-content {
+    background-color: var(--dark-blue);
+    border-radius: 0.5em;
+    padding: 1em;
+}
+.grid-subitem-content>div:first-child {
+    font-size: 18px;
+}
+.grid-item {
+    border-radius:0.5em;
+    display: grid;
+    align-content: end;
+}
+.grid-subitem>svg {
+    /* background-repeat: no-repeat; */
+    overflow: hidden;
+    justify-self: flex-end;
+    
+}
+.grid-item:nth-child(2) {
+    background-color: hsl(15, 100%, 70%);
+}
+.grid-item:nth-child(3) {
+    background-color: hsl(195, 74%, 62%);
+}
+.grid-item:nth-child(4) {
+    background-color: hsl(348, 100%, 68%);
+}
+.grid-item:nth-child(5) {
+    background-color: hsl(145, 58%, 55%);
+}
+.grid-item:nth-child(6) {
+    background-color: hsl(264, 64%, 52%);
+}
+.grid-item:nth-child(7) {
+    background-color: hsl(43, 84%, 65%);
+}
+.grid-subitem {
+    border-radius: 0.5em;
+    /* ! Here must be position to the bottom of the container */
+    display: grid;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% auto;
+}
+
+#userName {
+    background-color: var(--blue);
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: -0.9em;
+    padding-bottom: 3em;
+}
+#userName>img {
+    width: 64px;
+    height: 64px;
+    border:white 2px solid;
+    border-radius: 50%;
+}
+#schedule-select {
+    padding-top: 1em;
+}
+.weekly, .monthly {
+    display: none;
+}
+/* .daily, .weekly, .monthly {
+ font-size: 1.5em;   
+} */
+.previousTime {
+    color: rgba(255, 255, 255, 0.603);
+    
+}
+/* @media screen and (max-width : 1440px){ */
+    body {
+        padding: 25% 10%;
+    }
     main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1em;
     }
     main>.grid-item:first-child {
         grid-row: 1/3;
+        align-content: stretch;
     }
-}
+
 
 @media screen and (max-width : 375px) {
     main {
@@ -15,3 +107,4 @@
         flex-direction: column;
     }
 }
+
