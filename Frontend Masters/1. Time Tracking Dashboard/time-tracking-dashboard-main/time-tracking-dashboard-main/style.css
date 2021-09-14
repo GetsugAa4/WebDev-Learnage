@@ -1,18 +1,27 @@
 /* Setting colors */
 :root {
-    --blue: hsl(246, 80%, 60%); /* #userName */
+    --blue: hsl(246, 80%, 60%);
     --dark-blue : hsl(235, 46%, 20%); 
     --very-dark-blue: hsl(226, 43%, 10%);
 }
 
 body {
+    padding: 25% 10%;
     color: white;
     background-color: var(--very-dark-blue);
     font-family: 'Rubik', sans-serif;
 }
 main {
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5em;
 }
+main>.grid-item:first-child {
+    grid-row: 1/3;
+    align-content: stretch;
+}
+
 .grid-subitem-content {
     background-color: var(--dark-blue);
     border-radius: 0.5em;
@@ -54,9 +63,8 @@ main {
     border-radius: 0.5em;
     /* ! Here must be position to the bottom of the container */
     display: grid;
-    
     grid-template-columns: 1fr;
-    grid-template-rows: 20% auto;
+    grid-template-rows: 15% auto;
 }
 
 #userName {
@@ -65,6 +73,8 @@ main {
     padding: 1em;
     margin: -0.9em;
     padding-bottom: 3em;
+    line-height: 2em;
+    
 }
 #userName>img {
     width: 64px;
@@ -73,8 +83,16 @@ main {
     border-radius: 50%;
 }
 #schedule-select {
-    padding-top: 1em;
+    padding-top: 2em;
+    border: none;
+    text-decoration: none;
 }
+#schedule-select>span:hover {
+    color : #000;
+    cursor: pointer;
+}
+
+
 .weekly, .monthly {
     display: none;
 }
@@ -85,20 +103,7 @@ main {
     color: rgba(255, 255, 255, 0.603);
     
 }
-/* @media screen and (max-width : 1440px){ */
-    body {
-        padding: 25% 10%;
-    }
-    main {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 1em;
-    }
-    main>.grid-item:first-child {
-        grid-row: 1/3;
-        align-content: stretch;
-    }
+
 
 
 @media screen and (max-width : 375px) {
@@ -107,4 +112,3 @@ main {
         flex-direction: column;
     }
 }
-
