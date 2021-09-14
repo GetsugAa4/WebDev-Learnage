@@ -86,9 +86,10 @@ main>.grid-item:first-child {
     padding-top: 2em;
     border: none;
     text-decoration: none;
+    color : hsla(0, 0%, 100%, 0.404)
 }
 #schedule-select>span:hover {
-    color : #000;
+    color : white;
     cursor: pointer;
 }
 
