@@ -2,6 +2,7 @@
 :root {
     --blue: hsl(246, 80%, 60%);
     --dark-blue : hsl(235, 46%, 20%); 
+    --dark-blue-hover: rgb(38, 42, 92);
     --very-dark-blue: hsl(226, 43%, 10%);
 }
 
@@ -66,6 +67,9 @@ main>.grid-item:first-child {
     grid-template-columns: 1fr;
     grid-template-rows: 15% auto;
 }
+.grid-subitem-content:hover {
+    background-color: var(--dark-blue-hover);
+}
 
 #userName {
     background-color: var(--blue);
@@ -97,12 +101,12 @@ main>.grid-item:first-child {
 .weekly, .monthly {
     display: none;
 }
-/* .daily, .weekly, .monthly {
- font-size: 1.5em;   
-} */
+.daily, .weekly, .monthly {
+ font-size: 2em;   
+}
 .previousTime {
     color: rgba(255, 255, 255, 0.603);
-    
+    font-size: 0.4em;
 }
 
 

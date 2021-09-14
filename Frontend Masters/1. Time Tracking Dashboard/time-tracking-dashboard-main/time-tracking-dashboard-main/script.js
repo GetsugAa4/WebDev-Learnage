@@ -13,6 +13,8 @@ function displayDaily() {
     document.getElementById("dayButton").style.color='white';
     document.getElementById("weekButton").style.color='hsla(0, 0%, 100%, 0.404)';
     document.getElementById("monthButton").style.color='hsla(0, 0%, 100%, 0.404)';
+    
+
 }
 
 function displayWeekly() {
