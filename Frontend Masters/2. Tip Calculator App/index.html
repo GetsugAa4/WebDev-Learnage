@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <h1>
+    <span>SPLI</span>
+    <br>
+    <span>TTER</span>
+  </h1>
+  
+  <main>
+
+    <form action="#" name="calculator" id='form'>
+
+      <div>
+        <label for="bill">Bill</label>
+        <br>
+        <input type="text" name="bill" id="bill" class='parameters'>
+      </div>
+
+      <div>
+        <label for="tip%">Select Tip %</label>
+        <div class="tip-flex-container">
+          <input type="button" value="5%" class="percentageButton">
+          <input type="button" value="10%" class="percentageButton">
+          <input type="button" value="15%" class="percentageButton">
+          <input type="button" value="25%" class="percentageButton">
+          <input type="button" value="50%" class="percentageButton">
+          <input type="text" value=""  class='parameters' placeholder="CUSTOM" id='customTip'>
+        </div>
+        
+      </div>
+
+      <div>
+        <label for="divideBy">Number of people</label>
+        <br>
+        <input type="text" name="divideBy" id="divideBy" class='parameters'>
+      </div>
+
+    </form>
+
+    <section class="results" id="results-flex-container">
+      <div>
+        <article>
+          <span>
+            Tip Amount
+          </span>
+          <span>
+            / person
+          </span>
+        </article>
+        <article>
+          <span>
+            Total
+          </span>
+          <span>
+            / person
+          </span>
+        </article>
+      </div>
+      
+        <input type="button" for="calculator" value="RESET" onclick="resetForm()" id="resetButton">
+      
+    </section>
+
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/GetsugAa4" target="_blank">Jaded_Chicken</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

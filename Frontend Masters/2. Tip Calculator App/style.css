@@ -1,0 +1,111 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+* {
+    font-family: 'Space Mono', monospace, serif;
+    font-weight: bold;
+}
+
+/* Setting colors */
+
+:root {
+    --strong-cyan : hsl(172, 67%, 45%) ;
+    --very-dark-cyan :hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(184, 14%, 56%);
+    --darker-grayish-cyan: hsl(186, 14%, 43%);
+    --light-grayish-cyan:hsl(185, 41%, 84%);
+    --lighter-grayish-cyan:hsl(189, 41%, 97%);
+    /* ? WHITE */
+    
+}
+
+/* Positioning */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+#results-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#resetButton {
+    width: 80%;
+}
+
+/* Styling */
+
+body {
+    background-color: var(--light-grayish-cyan);
+    padding:10% 20%;
+    
+}
+
+h1 {
+    color: var(--darker-grayish-cyan);
+    text-align: center;
+}
+
+section {
+    background-color: var(--very-dark-cyan);
+}
+
+label {
+    color: var(--darker-grayish-cyan);
+}
+
+input {
+    background-color: var(--very-dark-cyan);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+}
+
+input:hover {
+    background-color: var(--strong-cyan);
+}
+
+.percentageButton {
+    color: white;
+}
+
+.percentageButton:hover {
+    color: var(--very-dark-cyan);
+}
+input:active{
+    border : var(--strong-cyan) 2px solid;
+    background-color: var(--lighter-grayish-cyan);
+}
+
+#customTip:hover {
+    color: var(--very-dark-cyan);
+}
+
+.parameters {
+    background-color: var(--lighter-grayish-cyan);
+    border:transparent 2px solid;
+    width: 100%;
+}
+.parameters:hover {
+    border : var(--strong-cyan) 2px solid;
+    background-color: var(--lighter-grayish-cyan);
+}
+
+.tip-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tip-flex-container>input {
+    width: 80px;
+    height: 40px;
+    align-content: space-around;
+    justify-content: space-around;
+    margin: 0.25em;
+}
