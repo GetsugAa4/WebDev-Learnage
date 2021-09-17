@@ -33,11 +33,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
 }
 
 #resetButton {
     width: 80%;
+    align-self: center;
 }
 
 /* Styling */
@@ -68,34 +69,15 @@ input {
     height: 40px;
 }
 
-input:hover {
-    background-color: var(--strong-cyan);
-}
 
 .percentageButton {
     color: white;
-}
-
-.percentageButton:hover {
-    color: var(--very-dark-cyan);
-}
-input:active{
-    border : var(--strong-cyan) 2px solid;
-    background-color: var(--lighter-grayish-cyan);
-}
-
-#customTip:hover {
-    color: var(--very-dark-cyan);
 }
 
 .parameters {
     background-color: var(--lighter-grayish-cyan);
     border:transparent 2px solid;
     width: 100%;
-}
-.parameters:hover {
-    border : var(--strong-cyan) 2px solid;
-    background-color: var(--lighter-grayish-cyan);
 }
 
 .tip-flex-container {
@@ -108,4 +90,17 @@ input:active{
     align-content: space-around;
     justify-content: space-around;
     margin: 0.25em;
+}
+
+.resultOfCalculus {
+    color: var(--strong-cyan);
+    font-size: 20px;
+}
+.title {
+    color: white;
+    font-size: 12px;
+}
+.subtitle {
+    color: var(--dark-grayish-cyan);
+    font-size: 10px;
 }

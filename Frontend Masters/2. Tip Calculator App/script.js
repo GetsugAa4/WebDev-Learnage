@@ -23,19 +23,31 @@ function tipAmount(bill, percentage, divide) {
     // Taking the values needed
     var bill = document.getElementById("bill").value;
     var divide = document.getElementById("divideBy").value;
-    console.log(bill,percent,divide);
+
+    // if (typeof percentage == 'undefined') {
+    //     percent = document.getElementById('customTip').value;
+    //     setPercentage(percent);
+    // }
 
     //  !  Calculus
 
     var totalTip = (bill/100)*percent;
     console.log(totalTip + ' Total tip');
+    document.getElementById('innerTotal').innerText = totalTip.toFixed(2);
 
     var tipPerPerson = totalTip/divide;
     console.log(tipPerPerson + ' Tip per person');
+    document.getElementById('innerPerPerson').innerText = tipPerPerson.toFixed(2);
 
 
-    // If any isn't a number, say it needs a number AND No input can be 0
-    if (bill == 0 || percentage == 0 || divide == 0 ) {
-        
-    }
+    console.log(bill,percent,divide);
+
+}
+
+function ifZero() {
+    if (document.getElementById("bill").value == '0') {
+    document.getElementById("bill").style.borderColor = 'red';
+}   else {
+    document.getElementById("bill").style.borderColor = 'white';
+}
 }

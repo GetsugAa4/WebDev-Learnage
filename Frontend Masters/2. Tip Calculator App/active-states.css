@@ -1,0 +1,21 @@
+input:hover {
+    background-color: var(--strong-cyan);
+}
+
+input:active{
+    border : var(--strong-cyan) 2px solid;
+    background-color: var(--lighter-grayish-cyan);
+}
+
+.percentageButton:hover {
+    color: var(--very-dark-cyan);
+}
+
+#customTip:hover {
+    color: var(--very-dark-cyan);
+}
+
+.parameters:hover {
+    border : var(--strong-cyan) 2px solid;
+    background-color: var(--lighter-grayish-cyan);
+}

@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="active-states.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -27,26 +28,26 @@
     <form action="#" name="calculator" id='form'>
 
       <div>
-        <label for="bill">Bill</label>
+        <label for="bill">Addition</label>
         <br>
-        <input type="text" name="bill" id="bill" class='parameters'>
+        <input type="text" name="bill" id="bill" class='parameters' oninput="ifZero()">
       </div>
 
       <div>
-        <label for="tip%">Select Tip %</label>
+        <label for="tip%">Pourboire en %</label>
         <div class="tip-flex-container">
           <input type="button" value="5%" class="percentageButton" onclick="setPercentage(5)">
           <input type="button" value="10%" class="percentageButton" onclick="setPercentage(10)">
           <input type="button" value="15%" class="percentageButton" onclick="setPercentage(15)">
           <input type="button" value="25%" class="percentageButton" onclick="setPercentage(25)">
           <input type="button" value="50%" class="percentageButton" onclick="setPercentage(50)">
-          <input type="text" value=""  class='parameters' placeholder="CUSTOM" id='customTip'>
+          <input type="text" class='parameters' placeholder="AUTRE" id='customTip' oninput="setPercentage(document.getElementById('customTip').value)">
         </div>
         
       </div>
 
       <div>
-        <label for="divideBy">Number of people</label>
+        <label for="divideBy">A combien ?</label>
         <br>
         <input type="number" name="divideBy" id="divideBy" class='parameters' oninput="tipAmount()">
       </div>
@@ -55,22 +56,40 @@
 
     <section class="results" id="results-flex-container">
       <div>
-        <article>
-          <span>
-            Tip Amount
-          </span>
-          <span>
-            / person
-          </span>
-        </article>
-        <article>
-          <span>
-            Total
-          </span>
-          <span>
-            / person
-          </span>
-        </article>
+        <div style="display: flex; justify-content: space-around;">
+          <article>
+            <span class='title'>
+              Total du pourboire
+            </span>
+            <br>
+            <span class='subtitle'>
+              / personne
+            </span>
+          </article>
+          <article class='resultOfCalculus' id='resultTipTotal'>
+            <span id="innerTotal">
+
+            </span>
+            €
+          </article>
+        </div>
+        <div style="display: flex; justify-content: space-around;">
+          <article>
+            <span class='title'>
+              Total
+            </span>
+            <br>
+            <span class='subtitle'>
+              / personne
+            </span>
+          </article>
+          <article class='resultOfCalculus'  id='resultTipPerPerson'>
+            <span id="innerPerPerson">
+
+            </span>
+            €
+          </article>
+        </div>
       </div>
       
         <input type="button" for="calculator" value="RESET" onclick="resetForm()" id="resetButton">
