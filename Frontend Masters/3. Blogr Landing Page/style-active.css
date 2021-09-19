@@ -1,0 +1,13 @@
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+:is(.title, .block-right) > span:hover {
+    cursor: pointer;
+}
+
+footer > section > p:hover {
+    text-decoration: underline;
+    cursor : pointer;
+}

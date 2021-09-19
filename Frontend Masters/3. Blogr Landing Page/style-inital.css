@@ -1,19 +1,95 @@
+/* ! Colors */
+:root {
+
+/** Primary */
+
+--light-red-CTA : hsl(356, 100%, 66%); /* CTA text */
+--very-light-red-CTA : hsl(355, 100%, 74%) ;/* CTA hover background*/
+--very-dark-blue : hsl(208, 49%, 24%);
+
+/** Neutral */
+
+/* - White (text): hsl(0, 0%, 100%); */
+    --grayish-blue : hsl(240, 2%, 79%); /* footer text */
+    --very-dark-grayish-blue : hsl(207, 13%, 34%); /* body copy */
+    --very-dark-black-blue : hsl(240, 10%, 16%); /* footer background */
+
+/** Gradient */
+
+/* Background gradient - Intro/CTA mobile nav: */
+
+    --very-light-red : hsl(13, 100%, 72%);
+    --light-red : hsl(353, 100%, 62%);
+
+/* Background gradient - body: */
+
+    --very-dark-gray-blue : hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue : hsl(237, 23%, 32%);
+}
+/* ! Fonts */
+:root {
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Overpass', sans-serif;
+}
+/* ! End of colors */
+
+
 /* ! Design of main elements */
+
+header, main, footer {
+    padding : 3em 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    background-color : blue;
+    background-image: linear-gradient(to right, var(--very-light-red) , var(--light-red));
+    padding: 3em;
+    border-bottom-left-radius: 80px;
 }
 
-#mid-section {
-    background-color: lightblue;
+
+    /* ? Header design : navbar + title */
+.nav {
+    padding : 0 3em ;
+    
 }
 
-footer {
-    background-color: lawngreen;
+a {
+    text-decoration: none;
+    color: black;
 }
-/* !End of main design */
 
-
-/* ! Positioning the navbar */
+.title {
+    text-align: center;
+    color: white;
+}
+.title h1 {
+    font-size: 3em;
+}
+:is(.title, .block-right) > span {
+    border-radius: 24px;
+    padding: 12px;
+}
+.block-right > span:first-child {
+    background-color: none;
+}
+.title-stylized-span, .nav-right-stylized-span {
+    background-color: white;
+    padding: 1em;
+    color :var(--light-red-CTA);
+}
+.title>span:last-child {
+    border: white 1px solid;
+    border-radius: 24px;
+}
+.nav-right-unstylized-span {
+    color: white;
+}
+        /* * Positioning the navbar */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -22,29 +98,62 @@ footer {
 .nav .block-left {
     display: flex;
 }
-/* ! End */
+
+        /* * End of navbar positioning */
+    /* ? End of header design */
+
+
+    /* ? Start of content design */
+main > section {
+}
+
+#mid-section {
+    background-image: linear-gradient(to right, var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
+}
+    /* ? End of content design */
+
+
+
+
+    /* ? Start of footer design */
+footer {
+    background-color: var(--very-dark-black-blue);
+    color : var(--grayish-blue);
+}
+    /* ? End of footer design */
+/* !End of main design */
+
+
+
 
 
 /* ! Creating the collapsibles : from W3S */
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
+    color:white;
     cursor: pointer;
     padding: 18px;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
+    border-radius: 10px;
+    background-color: transparent;
 }
   
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-    background-color: #ccc;
-}
 
+.collapsible:hover {
+    text-decoration: underline;
+}
 /* Style the collapsible content. Note: hidden by default */
 .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: hsla(237, 23%, 32%, 0.192) 3px 3px ;
 }
 /* ! End of collapsible styling */
