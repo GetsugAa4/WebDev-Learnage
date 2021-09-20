@@ -6,7 +6,14 @@ a:hover {
 :is(.title, .block-right) > span:hover {
     cursor: pointer;
 }
-
+.nav-right-stylized-span:hover, .title-stylized-span:hover {
+    background-color: var(--very-light-red-CTA);
+    color: white;
+}
+.title-unstylized-span:hover {
+    background-color: white;
+    color: var(--very-light-red);
+}
 footer > section > p:hover {
     text-decoration: underline;
     cursor : pointer;

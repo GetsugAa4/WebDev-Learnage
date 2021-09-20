@@ -26,13 +26,13 @@
     --very-dark-gray-blue : hsl(237, 17%, 21%);
     --very-dark-desaturated-blue : hsl(237, 23%, 32%);
 }
+/* ! End of colors */
+
 /* ! Fonts */
 :root {
     font-family: 'Overpass', sans-serif;
     font-family: 'Overpass', sans-serif;
 }
-/* ! End of colors */
-
 
 /* ! Design of main elements */
 
@@ -104,11 +104,34 @@ a {
 
 
     /* ? Start of content design */
-main > section {
+#top-section {
+    display: grid;
+    grid-template-rows: 4em 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 2em;
+}
+#top-section>h3 {
+    text-align: center;
+}
+        /* Positioning the sultitile and text because svg takes space */
+#top-section-content {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#top-section-content>article:first-child {
+    padding : 6em 1em 0 1em;
+    line-height: 1.5em;
+}
+#top-section-content>article:last-child {
+    margin-right: -17.5em;
+    margin-top: -7em;    
 }
 
 #mid-section {
     background-image: linear-gradient(to right, var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
+    border-radius: 0 48px 0 48px;
 }
     /* ? End of content design */
 
@@ -119,6 +142,10 @@ main > section {
 footer {
     background-color: var(--very-dark-black-blue);
     color : var(--grayish-blue);
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+    border-top-right-radius: 48px;
 }
     /* ? End of footer design */
 /* !End of main design */
