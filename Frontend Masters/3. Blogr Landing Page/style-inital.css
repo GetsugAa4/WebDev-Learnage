@@ -51,7 +51,10 @@ header {
     border-bottom-left-radius: 80px;
 }
 
-
+    /* ? Header svg */
+.header-svg {
+    
+}
     /* ? Header design : navbar + title */
 .nav {
     padding : 0 3em ;
@@ -132,6 +135,7 @@ a {
 #mid-section {
     background-image: linear-gradient(to right, var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
     border-radius: 0 48px 0 48px;
+    display: flex;
 }
     /* ? End of content design */
 
