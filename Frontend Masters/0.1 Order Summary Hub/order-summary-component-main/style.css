@@ -1,0 +1,71 @@
+body {
+    padding: 10% 25%;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.content {
+    background-color: white;
+    border-radius: 1em;
+    /* ! width has to be the same as the main svg */
+    width: 450px;
+    text-align: center;
+    box-shadow: rgba(128, 128, 128, 0.127) 0px 10px;
+}
+.dancer>img {
+    border-radius: 1em 1em 0 0;
+    overflow: hidden;
+}
+h1 {
+    font-weight: 900;
+}
+.subtitle, .payment, .link, .cancel {
+    font-weight: 700;
+}
+.link {
+    color: hsl(245, 75%, 52%);
+    text-decoration: underline;
+}
+.order-summary {
+    padding: 1em;
+}
+.order-summary>p {
+    padding: 1em 3em;
+}
+.annual-plan {
+    background-color: hsla(225, 100%, 94%, 0.5);
+    border-radius: 1em;
+    margin: 0 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+}
+.annual-plan>section {
+    display: flex;
+    align-items: center;
+}
+.text {
+    padding-left: 1em;
+}
+.subtitle {
+    font-weight: 700;
+}
+.buttons {
+    margin: 1em 3em;
+}
+.payment {
+    border-radius: 1em;
+    background-color: hsl(245, 75%, 52%);
+    padding : 1em 0;
+    color: white;
+}
+.cancel {
+    padding : 1em 0;
+}
+.gray {
+    color: gray;
+}

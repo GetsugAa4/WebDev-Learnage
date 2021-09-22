@@ -1,0 +1,12 @@
+.link:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.payment:hover {
+    cursor: pointer;
+    background-color: hsl(245, 50%, 65%);;
+}
+.cancel:hover {
+    color: #000;
+    cursor: pointer;
+}
