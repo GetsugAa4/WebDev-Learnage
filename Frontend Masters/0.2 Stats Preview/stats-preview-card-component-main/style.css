@@ -29,10 +29,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap-reverse;
+    padding: 25% 10%;
 }
 section {
-    text-align: justify;
     background-color: var(--dark-desaturated-bue);
     border-radius: 5px;
 }
@@ -41,6 +40,9 @@ section:first-child {
 }
 span {
     color: var(--soft-violet);
+}
+.img {
+    width: 100%;
 }
 .img-mobile {
     display: none;
